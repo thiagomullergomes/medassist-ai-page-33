@@ -54,7 +54,7 @@ const PricingSection = () => {
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`relative bg-white/5 backdrop-blur-sm rounded-3xl p-8 border transition-all duration-300 hover:scale-105 animate-fade-in ${
+              className={`relative bg-white/5 backdrop-blur-sm rounded-3xl p-8 border transition-all duration-300 hover:scale-105 animate-fade-in flex flex-col ${
                 plan.popular 
                   ? 'border-gold bg-gradient-to-br from-gold/10 to-gold-dark/10 shadow-2xl shadow-gold/20' 
                   : 'border-gold/20 hover:border-gold/40'
@@ -85,7 +85,7 @@ const PricingSection = () => {
                 </p>
               </div>
 
-              <div className="space-y-4 mb-8">
+              <div className="space-y-4 mb-8 flex-grow">
                 {plan.features.map((feature, featureIndex) => (
                   <div
                     key={featureIndex}
@@ -101,7 +101,7 @@ const PricingSection = () => {
                 ))}
               </div>
 
-              <button className={`w-full font-archivo font-bold text-lg py-4 rounded-2xl transition-all duration-300 ${
+              <button className={`w-full font-archivo font-bold text-lg py-4 rounded-2xl transition-all duration-300 mt-auto ${
                 plan.popular
                   ? 'bg-gradient-to-r from-gold to-gold-dark text-dark hover:shadow-lg hover:shadow-gold/25'
                   : 'bg-white/10 text-white border border-gold/30 hover:bg-gold/20 hover:border-gold'
